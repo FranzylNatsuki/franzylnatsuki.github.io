@@ -1,0 +1,419 @@
+@font-face {
+    font-family: "LineSeedSansRegular";
+    src: url(FONTS/LINESeedSans_W_Rg.eot); /* For IE */
+    src: url(FONTS/LINESeedSans_W_Rg.woff2) format('woff2'), /* Modern Browsers */
+         url(FONTS/LINESeedSans_W_Rg.woff) format('woff'), /* Most Browsers */
+         url(FONTS/LINESeedSans_W_Rg.ttf) format('truetype'); /* Legacy Browsers */
+}
+
+@font-face {
+    font-family: "LineSeedSansBold";
+    src: url(FONTS/LINESeedSans_W_Bd.eot); /* For IE */
+    src: url(FONTS/LINESeedSans_W_Bd.woff2) format('woff2'),
+         url(FONTS/LINESeedSans_W_Bd.woff) format('woff'),
+         url(FONTS/LINESeedSans_W_Bd.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "LineSeedSansHe";
+    src: url(FONTS/LINESeedSans_W_He.eot); /* For IE */
+    src: url(FONTS/LINESeedSans_W_He.woff2) format('woff2'),
+         url(FONTS/LINESeedSans_W_He.woff) format('woff'),
+         url(FONTS/LINESeedSans_W_He.ttf) format('truetype');
+}
+
+.bodyBG::before {
+    scale: 140%;
+    content: "";                          /* Necessary for pseudo-elements */
+    position: absolute;                   /* Position it absolutely */
+    top: 0;                               /* Align to top */
+    left: 0;                              /* Align to left */
+    right: 0;                             /* Stretch to right */
+    bottom: 0;                            /* Stretch to bottom */
+    height: 100%;
+    background-image: url('paper_texture_by_evusha_d68dvv6-fullview.jpg'); /* Add your image */
+    background-size: cover;               /* Cover the entire area */
+    background-position: center;          /* Center the image */
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px); 
+    opacity: 0.4;                         /* Adjust opacity (0.0 to 1.0) */
+    z-index: -65;                           /* Place it behind content */
+}
+
+.main_bodytype{
+    margin: 50px 100px ;
+    padding: 0 0px;
+}
+
+h1 {
+    font-family: "LineSeedSansRegular";
+}
+
+
+*{ 
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Spacings and stuff */
+
+.header-wrapper {
+    display: flex;
+    align-items: center; /* Align the image and text vertically */
+    justify-content: space-between; /* Ensures text and image are spaced out */
+}
+
+.header-wrapper img {
+    margin-left: 50x; /* Space between the image and the text */
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.header{ 
+    position: sticky;
+    z-index: 100; /* Ensure it's above other elements when scrolling */
+    top: 0; /* Stick the header to the top of the viewport */
+    width: 100%;
+    height: 80px;
+    display: block;
+    background: linear-gradient(to right, #0085FF, #00B2FF, #00D1FF);;
+}
+
+.inner_header {
+max-width: 1600px; /* Set a max-width to control the size */
+width: 100%;
+height: 100%;
+margin: 0 auto;
+display: flex;
+align-items: center;
+padding: 0px 100px; /* This controls the left and right margins */
+box-sizing: border-box; /* Ensure padding is included in the width calculation */
+}
+
+.header_text {
+    flex-grow: 1; /* Allow the text to take up remaining space after the logo */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align words to the right */
+    gap: 46px; /* Set equal spacing between the words */
+    margin-right: auto; /* Same as the left padding of .inner_header */
+    box-sizing: border-box; /* Ensure padding/margin is included */
+}
+
+.logo_container {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align logo to the left */
+    margin-right: auto; /* Allow logo to take space but push .header_text to the right */
+}
+
+.Herostyle {
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    position: relative;
+}
+.Herostyle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('PHOTOS/TryThisImage.png'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Ensures the background stays behind the content */
+}
+
+.about_me_layout {
+    padding: 100px 100px 100px 100px;
+    margin: auto;
+    height: auto;
+}
+
+.about_me_body {
+    display: flex;
+
+}
+
+/* Global Settings */
+
+.body{ 
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    font-family: "LineSeedSansBold";
+    font-size: 48px;
+}
+
+h2 {
+    font-family: "LineSeedSansRegular";
+    font-size: 28px;
+}
+
+h3 {
+    font-family: "LineSeedSansRegular";
+    font-size: 18px;
+}
+
+h5 {
+    font-family: "LineSeedSansRegular";
+    font-size: 20px;
+    color: #f7f7f7;
+}
+
+.interactivebuttons {
+    font-family: "LineSeedSansRegular";
+    font-size: 20px;
+    color: #f7f7f7;
+}
+
+.interactivebuttons:hover {
+    font-family: "LineSeedSansRegular";
+    font-size: 20px;
+    color: #f7f7f7;
+    transition: all 0.3s ease;
+    transform: translateY(-2px);
+}
+
+.interactivebuttons:active {
+    font-family: "LineSeedSansRegular";
+    font-size: 20px;
+    color: #f7f7f7;
+    transition: all 0.3s ease;
+    transform: translateY(1px);  /* Button moves down slightly when clicked */
+    
+}
+
+h6 {
+    font-family: "LineSeedSansRegular";
+    font-size: 12px;
+    color: #f7f7f7;
+}
+
+/*--------------Button Attributes----------------*/
+
+.button-style {
+    display: inline-block;
+    font-family: "LineSeedSansRegular";
+    font-size: 30px;
+    padding: 10px 20px;  /* Adjust padding as needed */
+    background-color: white;
+    color:  #00D1FF;  /* Button text color */
+    text-decoration: none;  /* Remove underline */
+    border-radius: 10px;  /* Rounded corners */
+    font-size: 16px;  /* Adjust font size */
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds shadow for "pop" effect */
+    transition: all 0.3s ease;  /* Smooth transitions */
+}
+
+.button-style:hover {
+    transition: all 0.3s ease;
+    background-color: #f0f0f0;  /* Slightly darker background on hover */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* More shadow on hover */
+    transform: translateY(-2px);  /* Subtle lift effect on hover */
+}
+
+.button-style:active {
+    transition: all 0.3s ease;
+    transform: translateY(1px);  /* Button moves down slightly when clicked */
+}
+
+.FiveCees {
+    display: inline-block;
+    font-family: "LineSeedSansRegular";
+    font-size: 100px;
+    padding: 20px 20px;
+    width: 150px;
+    height: auto;
+    background-color: white;
+    color:  #000;  /* Button text color */
+    text-decoration: none;  /* Remove underline */
+    border-radius: 10px;  /* Rounded corners */
+    font-size: 16px;  /* Adjust font size */
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds shadow for "pop" effect */
+    transition: all 0.3s ease;  /* Smooth transitions */
+}
+
+.FiveCees:hover {
+    transition: all 0.3s ease;
+    background-color: #f0f0f0;  /* Slightly darker background on hover */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* More shadow on hover */
+    transform: translateY(-2px);  /* Subtle lift effect on hover */
+}
+
+.FiveCees:active {
+    transition: all 0.3s ease;
+    transform: translateY(1px);  /* Button moves down slightly when clicked */
+}
+
+.aboutmecontainer {
+        border-style: dashed;
+        border-radius: 14px;
+        border-color: #000;
+        padding: 20px 60px;
+        width: auto;       
+}
+
+/* Footer */
+
+.Footer, .push {
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #094379;
+    color: white;
+    text-align: center;
+    align-items: center;
+    box-shadow: 10px 4px 6px 4px rgba(0, 0, 0, 0.15);
+  }
+  
+  .footer_logo {
+      margin: auto; 
+      display: flexbox; 
+      align-content: center;
+  }
+
+/* Content Box */
+
+.contentBox { 
+    align-content: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    position: relative; 
+    border-radius: 16px; 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px); 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    overflow: hidden; 
+    height: 100px; 
+    width: 300px; 
+    margin: 10px; 
+    cursor: grab; 
+    transition: transform 0.3s ease; /* Only transition transform property */ flex-shrink: 0; top: auto; /* Reset any top positioning */ left: auto; /* Reset any left positioning */
+    flex-shrink: 0; 
+    top: auto; /* Reset any top positioning */ left: auto;
+
+}
+
+.contentBox.disabled {
+    pointer-events: none; /* Prevent interaction with disabled boxes */
+    opacity: 0.5; /* Optional: Visual feedback for disabled state */
+}
+
+.contentBox.enlarged { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    position: fixed; /* Keep it fixed when enlarged */ 
+    height: calc(100vh - 2%); /* Full viewport height */ 
+    width: calc(100vw - 2%); /* Full viewport width */ 
+    z-index: 10; /* Bring the enlarged box above others */ 
+    top: 40%; /* Center vertically */ 
+    left: 50%; /* Center horizontally */ 
+    transform: translate(-50%, -50%); /* Center the box */ 
+    margin: 0; /* Remove margin for enlarged state */ 
+    background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity */ 
+    pointer-events: none; /* Allow pointer events for interactions */ }
+
+.contentBox.active {
+    height: calc(100vh - 40px); /* Full height with some space */
+    width: calc(100vw - 40px);  /* Full width with some space */
+    z-index: 1; /* Bring active box to the front */
+    overflow: scroll;
+}
+
+#contentContainer {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between; 
+    scale: 90%;
+    display: flex;
+    align-self: center;
+    margin: 25px auto 60px;
+    flex-wrap: wrap; /* Allows the boxes to wrap into new rows */
+    justify-content: center; /* Centers the boxes in the container */
+    align-content: center; /* Aligns rows in the center */
+    gap: 10px; /* Optional: Adds space between boxes */
+    padding: 20px; /* Optional: Adds padding around the container */
+    width: 50%;
+}
+
+.contentBox.enlarged::before {
+    opacity: 0.2;
+    overflow: scroll;
+}
+
+.contentBox::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/fd/51/af/silliman-university.jpg?w=1200&h=-1&s=1');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px); /* Blurs the background image */
+    z-index: -1; /* Places the blurred background behind the main content */
+    opacity: 0.5; /* Default opacity */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity change */
+}
+
+.contentBox.reduced-opacity::before {
+    opacity: 0.1; /* Reduced opacity when class is added */
+}
+
+.contentBox:not(.enlarged):hover {
+    background-color: #f0f0f0;  /* Slightly darker background on hover */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* More shadow on hover */
+    transform: translateY(-2px);  /* Subtle lift effect on hover */
+}
+
+#contentBoxText1,  #contentBoxText2, #contentBoxText3, #contentBoxText4, #contentBoxText5, #contentBoxText6, #contentBoxText7, #contentBoxText8 {
+    cursor: grab;
+}
+
+.boxInformation {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    justify-content: left;
+    padding: 40px;
+    margin: auto;
+    max-height: calc(100vh - 60px); /* Ensures it fits within the viewport */
+    overflow-y: auto;               /* Allows scrolling if content overflows */
+    pointer-events: none;
+} 
+
+.close-button {
+    position: fixed;
+    top: 10px; /* Adjust to move down or up */
+    right: 10px; /* Move it to the right */
+    background: rgba(255, 255, 255, 0.8); /* Background with some opacity */
+    border: none; /* No border */
+    font-size: 50px; /* Large font size for visibility */
+    cursor: grab; /* Pointer cursor for better UX */
+    z-index: 20; /* Ensure it is above other elements */
+    pointer-events: auto;
+}
+
+.close-button:hover {
+    color: red; /* Optional: Change color on hover for visibility */
+}
