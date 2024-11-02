@@ -23,7 +23,6 @@
 }
 
 
-
 #bodyBG::before {
     scale: 1; /* Remove scaling */
     content: "";
@@ -309,7 +308,7 @@ body {
     backdrop-filter: blur(5px); 
     -webkit-backdrop-filter: blur(5px); 
     border: 1px solid rgba(255, 255, 255, 0.3); 
-    overflow: hidden; 
+    overflow: scroll; 
     height: 100px; 
     width: 300px; 
     margin: 10px; 
@@ -325,20 +324,26 @@ body {
     opacity: 0.5; /* Optional: Visual feedback for disabled state */
 }
 
-.contentBox.enlarged { 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    position: fixed; /* Keep it fixed when enlarged */ 
-    height: calc(100vh - 2%); /* Full viewport height */ 
-    width: calc(100vw - 2%); /* Full viewport width */ 
-    z-index: 200; /* Bring the enlarged box above others */ 
-    top: 50%; /* Center vertically */ 
-    left: 50%; /* Center horizontally */ 
-    transform: translate(-50%, -50%); /* Center the box */ 
-    margin: 0; /* Remove margin for enlarged state */ 
-    background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity */ 
-    pointer-events: none; /* Allow pointer events for interactions */ }
+
+
+.contentBox.enlarged {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; /* Keep it fixed when enlarged */
+    height: calc(90vh - 2%); /* Full viewport height */
+    width: calc(100vw - 2%); /* Full viewport width */
+    z-index: 101; /* Bring the enlarged box above others */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the box */
+    margin: 0; /* Remove margin for enlarged state */
+    background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity */
+    pointer-events: none; /* Allow pointer events for interactions */ 
+    overflow: scroll;
+}
+
+
 
 .contentBox.active {
     height: calc(100vh - 40px); /* Full height with some space */
