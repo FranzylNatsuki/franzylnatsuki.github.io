@@ -78,7 +78,7 @@ h1 {
     z-index: 100; /* Ensure it's above other elements when scrolling */
     top: 0; /* Stick the header to the top of the viewport */
     width: 100%;
-    height: 80px;
+    height: 70px;
     display: block;
     background: linear-gradient(to right, #0085FF, #00B2FF, #00D1FF);;
 }
@@ -105,7 +105,7 @@ box-sizing: border-box; /* Ensure padding is included in the width calculation *
 }
 
 .logo_container {
-    width: 200px;
+    width: 180px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -171,13 +171,13 @@ h5 {
 
 .interactivebuttons {
     font-family: "LineSeedSansRegular";
-    font-size: 20px;
+    font-size: 16px;
     color: #f7f7f7;
 }
 
 .interactivebuttons:hover {
     font-family: "LineSeedSansRegular";
-    font-size: 20px;
+    font-size: 16px;
     color: #f7f7f7;
     transition: all 0.3s ease;
     transform: translateY(-2px);
@@ -185,7 +185,7 @@ h5 {
 
 .interactivebuttons:active {
     font-family: "LineSeedSansRegular";
-    font-size: 20px;
+    font-size: 16px;
     color: #f7f7f7;
     transition: all 0.3s ease;
     transform: translateY(1px);  /* Button moves down slightly when clicked */
@@ -203,7 +203,7 @@ h6 {
 .button-style {
     display: inline-block;
     font-family: "LineSeedSansRegular";
-    font-size: 30px;
+    font-size: 27px;
     padding: 10px 20px;  /* Adjust padding as needed */
     background-color: white;
     color:  #00D1FF;  /* Button text color */
@@ -284,7 +284,7 @@ body {
     background-color: #094379;
     color: white;
     text-align: center;
-    padding: 10px; /* Optional: Add padding for better readability */
+    padding: 4px; /* Optional: Add padding for better readability */
     box-shadow: 10px 4px 6px 4px rgba(0, 0, 0, 0.15);
 }
   
@@ -308,7 +308,6 @@ body {
     backdrop-filter: blur(5px); 
     -webkit-backdrop-filter: blur(5px); 
     border: 1px solid rgba(255, 255, 255, 0.3); 
-    overflow: scroll; 
     height: 100px; 
     width: 300px; 
     margin: 10px; 
@@ -331,10 +330,11 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute; /* Keep it fixed when enlarged */
-    height: calc(90vh - 2%); /* Full viewport height */
-    width: calc(100vw - 2%); /* Full viewport width */
+    height: auto; /* Full viewport height */
+    width: calc(100vw + 2%); /* Full viewport width */
+    padding: 5px;
     z-index: 101; /* Bring the enlarged box above others */
-    top: 50%; /* Center vertically */
+    top: 30vh; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Center the box */
     margin: 0; /* Remove margin for enlarged state */
@@ -370,7 +370,6 @@ body {
 
 .contentBox.enlarged::before {
     opacity: 0.2;
-    overflow: scroll;
 }
 
 .contentBox::before {
