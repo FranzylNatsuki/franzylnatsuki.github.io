@@ -22,22 +22,24 @@
          url(FONTS/LINESeedSans_W_He.ttf) format('truetype');
 }
 
-.bodyBG::before {
-    scale: 140%;
-    content: "";                          /* Necessary for pseudo-elements */
-    position: absolute;                   /* Position it absolutely */
-    top: 0;                               /* Align to top */
-    left: 0;                              /* Align to left */
-    right: 0;                             /* Stretch to right */
-    bottom: 0;                            /* Stretch to bottom */
-    height: 100%;
-    background-image: url('paper_texture_by_evusha_d68dvv6-fullview.jpg'); /* Add your image */
-    background-size: cover;               /* Cover the entire area */
-    background-position: center;          /* Center the image */
-    backdrop-filter: blur(20px); 
-    -webkit-backdrop-filter: blur(20px); 
-    opacity: 0.4;                         /* Adjust opacity (0.0 to 1.0) */
-    z-index: -65;                           /* Place it behind content */
+
+
+#bodyBG::before {
+    scale: 1; /* Remove scaling */
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('paper_texture_by_evusha_d68dvv6-fullview.jpg');
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    opacity: 0.4;
+    z-index: -1;
+    overflow: hidden; /* Hide excess */
 }
 
 .main_bodytype{
@@ -145,11 +147,6 @@ box-sizing: border-box; /* Ensure padding is included in the width calculation *
 }
 
 /* Global Settings */
-
-.body{ 
-    margin: 0;
-    padding: 0;
-}
 
 
 h1 {
@@ -270,21 +267,32 @@ h6 {
 
 /* Footer */
 
-.Footer, .push {
-    position: static;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+.main-content {
+    flex-grow: 1;
+    display: flex; /* Optional */
+    flex-direction: column; /* Optional */
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0; /* Remove default margin */
+}
+
+.Footer {
+    margin-top: auto;
     background-color: #094379;
     color: white;
     text-align: center;
-    align-items: center;
+    padding: 10px; /* Optional: Add padding for better readability */
     box-shadow: 10px 4px 6px 4px rgba(0, 0, 0, 0.15);
-  }
+}
   
   .footer_logo {
       margin: auto; 
-      display: flexbox; 
+      display: flex; 
+      justify-content: center;
       align-content: center;
   }
 
@@ -324,8 +332,8 @@ h6 {
     position: fixed; /* Keep it fixed when enlarged */ 
     height: calc(100vh - 2%); /* Full viewport height */ 
     width: calc(100vw - 2%); /* Full viewport width */ 
-    z-index: 10; /* Bring the enlarged box above others */ 
-    top: 40%; /* Center vertically */ 
+    z-index: 200; /* Bring the enlarged box above others */ 
+    top: 50%; /* Center vertically */ 
     left: 50%; /* Center horizontally */ 
     transform: translate(-50%, -50%); /* Center the box */ 
     margin: 0; /* Remove margin for enlarged state */ 
